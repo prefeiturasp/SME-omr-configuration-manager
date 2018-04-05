@@ -1,0 +1,25 @@
+{
+  "name": "mstech-omr-configuration-manager",
+  "version": "2.5.0",
+  "description": "MStech OMR Configuration Manager",
+  "main": "./src/App.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "virgilio.neto@mstech.com.br",
+  "license": "MStech",
+  "repository": "git@gitlab.mstech.com.br:mstech-omr/configuration-manager.git",
+  "dependencies": {
+    "agenda": "^0.8.1",
+    "cron-parser": "^2.1.0",
+    "electron-prebuilt": "^0.37.4",
+    "mongodb": "^2.2.5",
+    "mssql": "^3.3.0",
+    "unzip": "^0.1.11",
+    "zip-folder": "^1.0.0"
+  },
+  "devDependencies": {}
+}

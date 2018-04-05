@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OMR Configuration Manager</title>
+
+    <link href="../static/vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="../static/css/css.css" rel="stylesheet" />
+    <link href="../static/css/main.css" rel="stylesheet" />
+</head>
+<body data-ng-app="confManagerApp">
+    <header class="header">
+        <div class="pull-left">
+            <ul class="toolbar-user">
+                <li><h1 class="logo">Assistente de Configurações</h1></li>
+            </ul>
+        </div>
+    </header>
+
+    <div data-ng-view=""></div>
+
+    <script src="../Loader.js"></script>
+    <script src="../static/vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../static/vendor/bootbox.js/bootbox.js"></script>
+    <script src="../static/vendor/angular/angular.min.js" ></script>
+    <script src="../static/vendor/angular-route/angular-route.min.js" ></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/module/dashboard/dashboard.js"></script>
+
+    <script src="../js/module/cryptography/cryptography.js"></script>
+    <script src="../js/module/service/service.js"></script>
+    <script src="../js/module/backup/backup.js"></script>
+
+    <script src="../js/module/general/general.js"></script>
+    <script src="../js/module/admin-ui/admin-ui.js"></script>
+    <script src="../js/module/api/api.js"></script>
+    <script src="../js/module/file-organizer/file-organizer.js"></script>
+    <script src="../js/module/pre-processor/pre-processor.js"></script>
+    <script src="../js/module/processor/processor.js"></script>
+    <script src="../js/module/result-sync/result-sync.js"></script>
+    <script src="../js/module/task-scheduler/task-scheduler.js"></script>
+    <script src="../js/routes.js"></script>
+</body>
+</html>

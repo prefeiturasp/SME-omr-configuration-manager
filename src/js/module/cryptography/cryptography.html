@@ -1,0 +1,32 @@
+<div class="heading-page">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="#/">Dashboard</a></li>
+            <li><a href="#/util/">Utilidades</a></li>
+            <li class="active">Criptografia</li>
+        </ol>
+    </div>
+</div>
+<article class="">
+    <div class="table-heading">
+        <div class="row">
+            <h3 class="col-md-12">Original</h3>
+        </div>
+        <div class="row">
+            <textarea id="original" class="col-md-12" data-ng-model="original"></textarea>
+        </div>
+    </div>
+    <div class="table-heading">
+        <div class="row">
+            <h3 class="col-md-12">Criptografado</h3>
+        </div>
+        <div class="row">
+            <textarea id="encrypted" class="col-md-12" data-ng-model="encrypted"></textarea>
+        </div>
+    </div>
+    <div style="padding-top: 7px;" class="container text-right">
+        <a data-ng-click="encrypt()" class="btn btn-success">Criptografar</a>
+        <a data-ng-click="decrypt()" class="btn btn-success">Descriptografar</a>
+        <a href="#/util/" class="btn">Voltar</a>
+    </div>
+</article>

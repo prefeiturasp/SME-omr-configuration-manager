@@ -1,0 +1,119 @@
+a {
+    text-decoration: none !important;
+}
+
+.footer {
+    background: #e6e6e6;
+    padding: 15px;
+    margin: 30px 0 0 0;
+    color: #6c6c6c;
+}
+
+.label {
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.label a {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: normal;
+}
+
+.panel-body {
+    min-height: 90px;
+}
+
+.content-wrapper {
+    margin-top: 20px;
+    margin-bottom: 74px;
+}
+
+.container-principal {
+    margin-top: 20px;
+    margin-bottom: 74px;
+    padding-bottom: 20px;
+}
+
+.header a {
+    color: #6c6c6c;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.paginacao li {
+    margin: 0;
+}
+
+.paginacao li.nav {
+    margin: 0;
+}
+
+.template  {
+    text-align: center;
+}
+
+.template .table td {
+    padding: 0.5rem !important;
+}
+
+.template-question {
+    background: #f0f0f0;
+}
+
+.template-correct {
+    background: #b8d7f0;
+}
+
+.exam-chart {
+    min-height: 400px;
+}
+
+.info-bar, .inverse a {
+    color: #ffffff;
+}
+
+.exam-legend li {
+    margin-left: 10px;
+}
+
+.has-template, .has-error, .has-success {
+    color: #ffffff !important;
+}
+
+.header {
+    overflow: visible;
+}
+
+.dropdown-menu {
+    left: -150px;
+}
+
+.break-line {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.panel-download, .panel-upload  {
+    border-color: #d3c6e9;
+}
+
+.panel-download > .panel-heading, .panel-upload > .panel-heading {
+    color: #603c76;
+    background-color: #e1d8f0;
+    border-color: #d0c6e9;
+}
+
+.label-download, .label-upload {
+    background-color: #905cb8;
+}
+
+.tiny {
+    padding: 5px;
+    font-weight: normal;
+}
+
+.application-list>li {
+    margin-left: 20px;
+    list-style-type: circle;
+}

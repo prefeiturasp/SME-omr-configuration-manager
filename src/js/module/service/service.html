@@ -1,0 +1,99 @@
+<div class="heading-page">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="#/">Dashboard</a></li>
+            <li><a href="#/util/">Utilidades</a></li>
+            <li class="active">Serviços</li>
+        </ol>
+    </div>
+</div>
+<article class="" data-ng-init="init()">
+        <div class="table-heading">
+            <div class="row">
+                <h3 class="col-md-12">Serviços do Sistema</h3>
+            </div>
+            <div class="row">
+                <table class="table table-striped" data-ng-if="services.length > 0">
+                    <tr>
+                        <th data-toggle="tooltip" data-placement="bottom" title="Serviço">Serviço</th>
+                        <th data-toggle="tooltip" data-placement="bottom" title="Status">Status</th>
+                        <th data-toggle="tooltip" data-placement="bottom" title="Status">Restartar</th>
+                    </tr>
+                    <tr data-ng-repeat="service in services">
+                        <td>{{service.name}}</td>
+                        <td data-ng-if="service.status">{{service.status}}</td>
+                        <td data-ng-if="service.error"><span class="tiny label label-danger">Falha</span></td>
+                        <td><a data-ng-click="serviceRestart($index)"><i class="material-icons">refresh</i></a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="table-heading">
+            <div class="row">
+                <h3 class="col-md-12">Tarefas Agendadas</h3>
+            </div>
+            <div class="row">
+                <table class="table table-striped" data-ng-if="jobs.length > 0">
+                    <tr>
+                        <th data-toggle="tooltip" data-placement="bottom" title="Tarefa">Tarefa</th>
+                        <th data-toggle="tooltip" data-placement="bottom" title="Intervalo">Intervalo</th>
+                        <th data-toggle="tooltip" data-placement="bottom" title="Última Execução">Última Execução</th>
+                        <th data-toggle="tooltip" data-placement="bottom" title="Próxima Execução">Próxima Execução</th>
+                        <th data-toggle="tooltip" data-placement="bottom" title="Reservado em">Reservado em</th>
+                        <th data-toggle="tooltip" data-placement="bottom" title="Status">Status</th>
+                    </tr>
+                    <tr data-ng-repeat="job in jobs">
+                        <td>{{job.attrs.name}}</td>
+                        <td>{{job.attrs.repeatInterval}}</td>
+                        <td>{{job.attrs.lastRunAtText}}</td>
+                        <td>{{job.attrs.nextRunAtText}}</td>
+                        <td>{{job.attrs.lockedAtText}}</td>
+                        <td>
+                            <span data-ng-if="job.status.scheduled" class="tiny label label-info">Agendado</span>
+                            <span data-ng-if="job.status.queued" class="tiny label label-primary">Aguardando</span>
+                            <span data-ng-if="job.status.running" class="tiny label label-warning">Executando</span>
+                            <span data-ng-if="job.status.completed" class="tiny label label-success">Finalizado</span>
+                            <span data-ng-if="job.status.failed" class="tiny label label-danger">Falha</span>
+                        </td>
+                    </tr>
+                </table>
+                <div class="alert alert-info" role="alert" data-ng-if="jobs.length == 0">
+                    <i class="material-icons">info</i> Não foram encontradas tarefas agendadas.
+                </div>
+            </div>
+        </div>
+        <div class="table-heading">
+            <div class="row">
+                <h4 class="col-md-12">Status das tarefas</h4>
+            </div>
+            <table class="table table-striped">
+                <tr>
+                    <th data-toggle="tooltip" data-placement="bottom" title="Status">Status</th>
+                    <th data-toggle="tooltip" data-placement="bottom" title="Descrição">Descrição</th>
+                </tr>
+                <tr>
+                    <td><span class="tiny label label-info">Agendado</span></td>
+                    <td>A tarefa está agendada para execução.</td>
+                </tr>
+                <tr>
+                    <td><span class="tiny label label-primary">Aguardando</span></td>
+                    <td>O horário programado para a execução da tarefa já chegou porém a mesma não está sendo executada. Isto pode ocorrer por dois motivos: 1. A execução anterior da tarefa ainda não acabou. 2. O agendador de tarefas não está executando.</td>
+                </tr>
+                <tr>
+                    <td><span class="tiny label label-warning">Executando</span></td>
+                    <td>A tarefa está sendo executada.</td>
+                </tr>
+                <tr>
+                    <td><span class="tiny label label-success">Finalizado</span></td>
+                    <td>A última execução da tarefa foi finalizada com sucesso.</td>
+                </tr>
+                <tr>
+                    <td><span class="tiny label label-danger">Falha</span></td>
+                    <td>A última execução da tarefa foi finalizada com erro.</td>
+                </tr>
+            </table>
+        </div>
+        <div style="padding-top: 7px;" class="container text-right">
+            <a href="#/util/" class="btn">Voltar</a>
+        </div>
+</article>

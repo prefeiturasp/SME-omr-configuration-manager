@@ -1,0 +1,67 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "mstech-node-cryptography@0.0.3",
+        "scope": null,
+        "escapedName": "mstech-node-cryptography",
+        "name": "mstech-node-cryptography",
+        "rawSpec": "0.0.3",
+        "spec": "0.0.3",
+        "type": "version"
+      },
+      "C:\\Projetos\\mstech-omr\\_git\\windows-installer\\application\\task-scheduler"
+    ]
+  ],
+  "_from": "mstech-node-cryptography@0.0.3",
+  "_id": "mstech-node-cryptography@0.0.3",
+  "_inCache": true,
+  "_location": "/mstech-node-cryptography",
+  "_nodeVersion": "4.4.5",
+  "_npmUser": {},
+  "_npmVersion": "3.8.5",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "mstech-node-cryptography@0.0.3",
+    "scope": null,
+    "escapedName": "mstech-node-cryptography",
+    "name": "mstech-node-cryptography",
+    "rawSpec": "0.0.3",
+    "spec": "0.0.3",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://npm.mstech.com.br/mstech-node-cryptography/-/mstech-node-cryptography-0.0.3.tgz",
+  "_shasum": "2181c1fcfbd3c40820b0841cfc9b66ac614a3c34",
+  "_shrinkwrap": null,
+  "_spec": "mstech-node-cryptography@0.0.3",
+  "_where": "C:\\Projetos\\mstech-omr\\_git\\windows-installer\\application\\task-scheduler",
+  "author": "",
+  "dependencies": {},
+  "description": "NodeJS Cryptography",
+  "devDependencies": {},
+  "dist": {
+    "shasum": "2181c1fcfbd3c40820b0841cfc9b66ac614a3c34",
+    "tarball": "http://npm.mstech.com.br/mstech-node-cryptography/-/mstech-node-cryptography-0.0.3.tgz"
+  },
+  "gitHead": "f58c7b83bea49149d0685d57ac3e874a20bc621f",
+  "license": "SEE LICENSE IN LICENCE.md",
+  "main": "./Cryptography.js",
+  "name": "mstech-node-cryptography",
+  "optionalDependencies": {},
+  "publishConfig": {
+    "registry": "http://npm.mstech.com.br"
+  },
+  "readme": "ERROR: No README data found!",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.mstech.com.br:js-utils/node-cryptography.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.3"
+}

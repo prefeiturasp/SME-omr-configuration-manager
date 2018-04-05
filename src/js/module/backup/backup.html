@@ -1,0 +1,35 @@
+<div class="heading-page">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="#/">Dashboard</a></li>
+            <li><a href="#/util/">Utilidades</a></li>
+            <li class="active">Backup</li>
+        </ol>
+    </div>
+</div>
+<article class="" data-ng-init="init()">
+    <form class="form-materials">
+        <div class="table-heading">
+            <div class="row">
+                <h3 class="col-md-12">Geral</h3>
+            </div>
+            <div class="row">
+                <ul class="alert alert-danger" data-ng-show="generalErrors.length > 0">
+                    <li data-ng-repeat="error in generalErrors">{{error}}</li>
+                </ul>
+                <div class="col-sm-12 form-group">
+                    <div class="group">
+                        <input type="text" required data-ng-model="data.FILE_BASEPATH" data-ng-click="selectFileDir()"/>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label class="label-animated">Destino</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="padding-top: 7px;" class="container text-right">
+            <a data-ng-click="save()" class="btn btn-success">Backup</a>
+            <a href="#/util/" class="btn">Voltar</a>
+        </div>
+    </form>
+</article>

@@ -1,0 +1,108 @@
+<div class="heading-page">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="#/">Dashboard</a></li>
+            <li><a href="#/configuration/">Configurações</a></li>
+            <li class="active">Processador</li>
+        </ol>
+    </div>
+</div>
+<article class="" data-ng-init="init()">
+    <form class="form-materials">
+        <div class="table-heading">
+            <div class="row">
+                <h3 class="col-md-12">Geral</h3>
+            </div>
+            <div class="row">
+                <ul class="alert alert-danger" data-ng-show="generalErrors.length > 0">
+                    <li data-ng-repeat="error in generalErrors">{{error}}</li>
+                </ul>
+                <div class="col-sm-3 form-group">
+                    <label>Nível de Log</label>
+                    <div class="select-field">
+                        <select class="form-control" data-ng-options="Log.description for Log in LogLevels track by Log.val" data-ng-model="_KEEP_LOG_LEVEL"></select>
+                    </div>
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label>Criptografia</label>
+                    <div class="select-field">
+                        <select class="form-control" data-ng-options="Crypt.description for Crypt in DataEncryption track by Crypt.val" data-ng-model="_ENCRYPTION_DISABLED" data-ng-disabled="generalConfig"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <div class="group">
+                        <input type="text" required data-ng-model="data.FILE_BASEPATH" data-ng-click="selectFileDir()" data-ng-disabled="generalConfig"/>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label class="label-animated">Caminho da pasta de Arquivos</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-heading">
+            <div class="row">
+                <h3 class="col-md-12">Banco de Dados</h3>
+            </div>
+            <div class="row">
+                <ul class="alert alert-danger" data-ng-show="dbErrors.length > 0">
+                    <li data-ng-repeat="error in dbErrors">{{error}}</li>
+                </ul>
+                <div class="col-sm-12 form-group">
+                    <div class="group">
+                        <input type="text" required data-ng-model="data.DB_MONGODB" data-ng-disabled="generalConfig"/>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label class="label-animated">String de Conexão</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-heading">
+            <div class="row">
+                <h3 class="col-md-12">Integração</h3>
+            </div>
+            <div class="row">
+                <ul class="alert alert-danger" data-ng-show="connectorErrors.length > 0">
+                    <li data-ng-repeat="error in connectorErrors">{{error}}</li>
+                </ul>
+                <div class="col-sm-6 form-group">
+                    <div class="group">
+                        <input type="text" required data-ng-model="data.CONNECTOR_SIA_HOST" data-ng-disabled="generalConfig"/>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label class="label-animated">Domínio da API</label>
+                    </div>
+                </div>
+                <div class="col-sm-3 form-group">
+                    <div class="group">
+                        <input type="text" required data-ng-model="data.CONNECTOR_SIA_USERNAME" data-ng-disabled="generalConfig"/>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label class="label-animated">Usuário da API</label>
+                    </div>
+                </div>
+                <div class="col-sm-3 form-group">
+                    <div class="group">
+                        <input type="text" required data-ng-model="data.CONNECTOR_SIA_PASSWORD" data-ng-disabled="generalConfig"/>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label class="label-animated">Senha da API</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="padding-top: 7px;" class="container">
+            <div style="padding-top: 10px;" class="col-sm-5">
+                <span class="label label-success">{{testPass}}</span>
+                <span class="label label-danger">{{testFail}}</span>
+                <span class="label label-info">3</span>
+            </div>
+            <div class="text-right">
+                <a data-ng-click="save()" class="btn btn-success">Salvar</a>
+                <a href="#/configuration/" class="btn">Voltar</a>
+            </div>
+        </div>
+    </form>
+</article>
